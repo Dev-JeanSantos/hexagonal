@@ -8,11 +8,11 @@ public class Erro {
     public static void inexistente(String nome){
         throw new NegocioException(nome + "é inexistente");
     }
-    public static void saldoInsuficiente(String nome){
+    public static void saldoInsuficiente(){
         throw new NegocioException("Saldo insuficiente");
     }
 
-    public static void mesmaConta(String nome){
+    public static void mesmaConta(){
         throw new NegocioException("Conta debito e crédito devem ser distintas");
     }
 }
