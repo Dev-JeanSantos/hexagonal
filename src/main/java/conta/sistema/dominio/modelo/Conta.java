@@ -25,10 +25,10 @@ public class Conta {
 
     public void creditar(BigDecimal credito) throws NegocioException{
         if(isNull(credito)){
-            obrigatorio("valor crédito");
+            obrigatorio("valor crédito ");
         }
         if (credito.compareTo(BigDecimal.ZERO)<=0){
-            obrigatorio("valor crédito");
+            obrigatorio("valor crédito ");
         }
         saldo = saldo.add(credito);
     }
