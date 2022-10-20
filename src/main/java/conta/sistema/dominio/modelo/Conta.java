@@ -34,12 +34,12 @@ public class Conta {
     }
     public void debitar(BigDecimal debito) throws NegocioException{
         if(isNull(debito)){
-            obrigatorio("valor débito");
+            obrigatorio("valor débito ");
         }
         if (debito.compareTo(BigDecimal.ZERO) <=0){
-            obrigatorio("valor débito");
+            obrigatorio("valor débito ");
         }
-        if (debito.compareTo(debito) > 0){
+        if (debito.compareTo(saldo) > 0){
             saldoInsuficiente();
         }
         saldo =  saldo.subtract(debito);
